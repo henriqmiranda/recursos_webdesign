@@ -1,0 +1,150 @@
+<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1" >
+<meta charset="utf-8">
+<title>CSS</title>
+<link href="https://fonts.googleapis.com/css?family=Krub" rel="stylesheet">
+<link href="css/main.css" rel="stylesheet" type="text/css">	
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+</head>
+<body>
+<header>
+				<div class="topnav">
+		  			<a href="JS.html">JS</a>
+		  			<a href="#" class="active">CSS</a>
+		  			<a href="index.html">HTML</a>
+				</div>
+
+	<div id="topHeader">
+		<h1>HTML</h1>
+		<div id="navButton">&#9776;</div>
+	</div>
+
+	<div id="navWrapper">
+		
+		<div id="nav">
+			<a id="closeMenu" class="menuBtn" >&times;</a>
+			<a class="menuBtn" href="#fonts">Fontes em CSS</a>
+			<a class="menuBtn" href="#coresrgb">Cores em  CSS RGB</a>
+			<a class="menuBtn" href="#coresrgba">Cores em CSS RGBA</a>
+			<a class="menuBtn" href="#posicionamento">Posicionamento</a>
+		</div>
+
+	</div>
+</header>
+
+		<section id="fonts">
+			<div id="css_1" class="container">
+					<h2>Fontes em CSS</h2>
+				<ul>
+					<li class="li"><a href="#">font-family</a></li>
+						<p>
+							Especifica a família de fontes para texto.
+						</p>
+					<li class="li"><a href="#">font-style</a></li>
+						<p>
+							Especifica o estilo da fonte do texto.
+						</p>
+					<li class="li"><a href="#">font-size</a></li>
+						<p>
+							Especifica o tamanho da fonte para o texto.
+						</p>
+					<li class="li"><a href="#">font-weight</a></li>
+						<p>
+							Especifica se um texto deve ou não ser exibido em uma fonte small-caps.
+						</p>
+					<li class="li"><a href="#">font-variant</a></li>
+						<p>
+							Especifica o peso de uma fonte.
+						</p>	
+				</ul>	
+			</div>
+		</section>
+			<hr>
+		<section id="coresrgb">
+			<div id="" class="container">
+					<h2>Cores em CSS RGB</h2>
+				<ul>
+					<li class="li"><a href="#">color: rgb(255, 255, 255);</a></li>
+						<p>
+								Valores de cores RGB são suportados em todos os navegadores.
+							Um valor de cor RGB é especificado com: rgb (vermelho, verde, azul).
+							Cada parâmetro (vermelho, verde e azul) define a intensidade da cor como um inteiro entre 0 e 255.
+							Por exemplo, rgb (0, 0, 255) é renderizado como azul, porque o parâmetro blue é definido como seu valor mais alto (255) e os outros são definidos como 0.
+						</p>
+				</ul>
+			</div>
+		</section>
+			<hr>
+		<section id="coresrgba">
+			<div id="" class="container">
+					<h2>Cores em CSS RGBA</h2>
+				<ul>
+					<li class="li"><a href="#">#p1 {background-color: rgba(255, 0, 0, 0.3);}</a></li>
+						<p>
+								Valores de cor RGBA são uma extensão dos valores de cores RGB com um alpha canal - que especifica a opacidade de uma cor.
+							Um valor de cor RGBA é especificado com: rgba (vermelho, verde, azul, alpha ). O alpha parâmetro é um número entre 0,0 (totalmente transparente) e 1,0 (totalmente opaco).
+						</p>
+				</ul>
+			</div>
+		</section>
+			<hr>
+		<section>
+			<div id="posicionamento" class="container">
+				<h2>Posicionamento</h2>
+					<ul>
+						<li class="li"><a href="#">posicion: absolute;</a></li>
+							<p>
+								Este elemento serve para posicionamento de algo em relação e algo "mãe".
+							</p>
+						<li class="li"><a href="#">posicion: relative;</a></li>
+							<p>
+								relative é o valor por defeito. Um elemento com position: relative; não é posicionado de uma forma qualquer. Diz-se que um elemento estático está não posicionado e um elemento com a sua posição com outro valor qualquer diz-se posicionado.
+							</p>
+						<li class="li"><a href="#">posicion: fixed;</a></li>
+							<p>
+								Um elemento fixo é posicionado relativamente ao viewport, significa que fica sempre no mesmo sitio, mesmo que faça scroll da página. 
+							</p>
+						<li class="li"><a href="#">posicion sticy</a></li>
+							<p>
+								O posicionamento sticy é um híbrido de posicionamento relativo e fixo. O elemento é tratado como posicionamento relativo até cruzar um limite especificado, ponto no qual é tratado como posicionamento fixo.
+							</p>	
+						<li class="li"><a href="#">float</a></li>
+							<p>
+								O pretendido com float é envolver texto á volta de imagens.
+							</p>
+					</ul>	
+			</div>
+		</section>
+	<footer>
+		<a rel="license" href="direitos.html" target="_blank">
+			<img alt="Licença Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />
+				Este trabalho está licenciado com uma Licença 
+					<p>2018 &copy; epci</p>
+	</footer>
+
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script>
+	$(document).ready(function(){
+		//$(nomeDoElemento).nomeDaAcção
+		$('#nav').slideUp(1);
+	
+		$('#navButton').on('click', function(){
+			$("#nav").delay(10).animate({width: 'toggle'}, 500);
+		});
+
+		$('.menuBtn').on('click', function(){
+			$("#nav").delay(10).animate({width: 'toggle'}, 500);
+			
+		});
+		
+		/* obter intervalo entre cada item */
+
+		$('p').append( "<br>").append( "<hr>").append("<br>");
+		
+	});
+</script>
+</body>
+</html>
